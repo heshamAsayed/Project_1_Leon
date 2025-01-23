@@ -1,3 +1,6 @@
-"# Project_1_Leon" 
+# Project_1_Leon
 
-This is Example project from Elzro web school channel
+## This is my first project by HTML & CSS
+
+### [For open live project click here](https://heshamasayed.github.io/Project_1_Leon/)
+
