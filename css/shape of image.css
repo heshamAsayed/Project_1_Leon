@@ -1,0 +1,65 @@
+.shape .one-shap{
+    display: inline-block;
+    width: 80%;
+    height: 80%;
+    margin: auto 0;
+    background-color: #ebeced;
+    z-index: 1;
+    border: 2px solid #ebeced;
+}
+.shape .two-shap{
+    display: inline-block;
+    width: 20%;
+    background-color: #14324a;
+
+}
+.shape .two-shap::before{
+    height: 20%;
+    width: 20%;
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: #14324a #14324a #14324a #14324a;
+    background-color: #14324a;
+    position: absolute;
+    right: 20%;
+}
+.shape .two-shap::after{
+    height: 20%;
+    width: 20%;
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: #14324a #14324a #14324a #14324a;
+    background-color: #14324a;
+    position: absolute;
+    right: 20%;
+    bottom: -0%;
+}
+.shape{
+    display: flex;
+    height: 100%;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

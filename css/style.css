@@ -1,0 +1,584 @@
+/* decler var  */
+:root{
+    --main-color:#10cab7;
+    --second-color:#f6f6f6;
+}
+/* end var  */
+/* start global rules from el zero  */
+*{
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior:smooth;
+}
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+.container{
+    padding: 0px 15px;
+    margin: 0px auto;
+}
+
+/*Small screen*/
+
+@media (min-width: 768px) {
+.container {
+    width: 750px;
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+.container {
+    width: 970px;
+    }
+}
+  /* Large */
+@media (min-width: 1200px) {
+.container {
+    width: 1170px;
+    }
+}
+
+/* End global rules  */
+
+
+
+
+/* =================================================
+                Start header
+=================================================*/
+/* 
+.icon span{
+    display: flex;
+    background-color: black;
+    margin: 5px 0;
+} */
+header{
+    padding: 20px;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .container .logo{
+    width: 60px;
+}
+header .container nav{
+    position: relative;
+}
+header .container nav .icon{
+    width:30px;
+    /* عشان هستخدم فلكس راب  */
+    display: flex;
+    /* عشان لو العرض اتملي ينزل تحت  */
+    flex-wrap: wrap;
+    /* بتحدد بدايه العنصر منين  */
+    justify-content: flex-end;
+    /* position:absolute; */
+    margin: auto 5%;
+}
+header .container  nav .icon span{
+    background-color: black;
+    margin-bottom: 5px;
+    height: 3px;
+    width:100%;
+}
+header .container nav .icon span:nth-child(even){
+    width:60%;
+}
+
+header .container nav .icon:hover span:nth-child(even){
+    transition: 0.3s;
+    width:100%;
+}
+
+
+/* ============================================== */
+/* this links which will be not visiable */
+header .container nav .nav{
+    list-style-type: none;
+    position:absolute;
+    margin: 0%;
+    padding: 0px;
+    background-color: #f6f6f6;
+    right: 0;
+    min-width: 200px;
+    top: calc(100% + 15px);
+    display: none;
+    z-index: 1;
+}
+header .container nav .nav li a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    list-style-type: none;
+    padding: 15px;    
+    transition: 0.3s;
+}
+
+header .container nav .nav li a:hover{
+    padding-left: 25px;
+}
+header .container nav ul::before{
+    content: "";
+    border-width: 10px;
+    border-style:solid;
+    border-color:transparent transparent #f6f6f6 transparent;
+    position: absolute;
+    right: 5px;
+    top: -20px;
+}
+header .container nav .nav li:not(:last-child){
+    border-bottom:2px solid #ddd;
+}
+header .container nav:hover .nav {
+    display:block;
+}
+/* ==================================
+                End header
+===================================== */
+
+
+/* ========================================
+                Start landing "the image"
+======================================== */
+.landing{
+    background-image: url(../images/back.jpg);
+    background-size: cover;
+    height: calc(100vh - 64px);
+    position: relative;
+
+}
+.landing .intro-text{
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+    max-width: 100%;
+}
+.landing .intro-text h1 {
+    margin: 0;
+    color:var(--main-color);
+}
+.landing .intro-text p{
+    color:var(--main-color);
+
+}
+
+
+/* ========================================
+                End landing "the image"
+======================================== */
+
+
+
+
+/* ========================================
+                Start 3 Features
+======================================== */
+.features{
+    padding: 50px 0;
+    text-align: center;
+    background-color: var(--second-color);
+}
+.features .container{
+    display: flex;
+    padding: 0 15px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.features .container .feat{
+    /* float: left;
+    padding: 40px 0;*/
+    width: 350px;
+    max-width: 100%; 
+    padding:20px;
+    margin-bottom: 20px;
+    margin-right:auto;
+    margin-left:auto;
+}
+.features .container .feat .fa-3x{
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+.features .container .feat h3{
+    font-weight: 800;
+    padding: 10px 0;
+    margin: 10px;
+}
+.features .container .feat p{
+    color: #333;
+    line-height: 1.8em;
+    padding-top: 10px;
+    font-size: 17px;
+}
+
+/* ========================================
+                End 3 Features
+======================================== */
+/* ========================================
+                Start Services
+======================================== */
+#services{
+    transition: 1s;
+}
+.container .special-header{
+    text-align: center;
+    font-size: 100px;
+    color: #ebeced;
+    letter-spacing: -3px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.container .special-header +p{
+    text-align: center;
+    margin-top: -30px;
+    color: #797979;
+}
+
+/* which is content all the columns  */
+.container .services-content{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 100px auto;
+    padding: 15px 10px;
+    justify-content: space-between;
+}
+/* the colums */
+.container .services-content .col-service{
+    width: 30%;
+}
+/* the card which is exist in the colmn */
+.container .services-content .col-service .serive-card{
+    padding-bottom: 30px;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    
+}
+.container .services-content .col-service .serive-card h4{
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    padding-top: 0;
+    margin-top: 0;
+}
+.container .services-content .col-service .serive-card p{
+    line-height:1.6;
+    text-align: left;
+    margin-left: 30px;
+    min-width: 100px;
+}
+
+.container .services-content .col-service .serive-card i{
+    color:var(--main-color);
+    padding-bottom: 30px;
+
+}
+
+
+@media (max-width:500px){
+    .container .special-header{
+        font-size: 50px;
+    }
+    .container .special-header +p{
+        text-align: center;
+        margin-top: -15px;
+        font-size:10px;
+    }
+    .container .services-content .Tshape{
+        display: none;
+    }
+    .container .services-content .col-service .serive-card{
+        flex-direction: column;
+}}
+
+@media (max-width:300px){
+    .container .services-content {
+        display:block;
+        margin:50px 0;
+        padding: 0;
+    }
+    .container .services-content .col-service {
+        width:100%;
+    }
+    .container .services-content .col-service .serive-card p{
+        margin: 0px;
+        text-align-last: center;
+    }
+}
+@media (max-width:400px){
+    .container .services-content .col-service .serive-card p{
+        margin: 0;
+        font-size: 13px;
+    }
+}
+
+/* ========================================
+                End Services
+======================================== */
+/*========================================
+                Start Portfolio
+=========================================*/
+.portfolio{
+    background-color:var(--second-color)
+}
+.portfolio .port{
+    padding-top:100px;
+    padding-bottom:100px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.portfolio .port-card{
+    background-color:white;
+    padding: 0  0 10px;
+    width:30%;
+}
+.portfolio .port-card img{
+    width: 100%;
+}
+
+.portfolio .port-card:hover img{
+    transform: translate(0,-30px) rotate(370deg);
+    transition: 1s;
+    transition-delay: 0.1s;
+}
+.portfolio .port-card .card-text{
+    text-align: left; 
+}
+.portfolio .port-card .card-text h3{
+    text-align: inherit;
+    padding: 12px;
+}
+.portfolio .port-card .card-text p{
+    color: #777;
+    padding:10px 15px 12px;
+    text-align: inherit;
+    line-height:1.6 ;
+}
+
+@media (max-width:550px){
+    .portfolio .port-card{
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+    }
+}
+@media (max-width:300px){
+    .portfolio .port {
+        padding-top: 62px;
+        padding-bottom: 50px;
+    }
+    .portfolio .port-card{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .portfolio .port-card .card-text p ,.portfolio .port-card .card-text h3{
+        text-align: center;
+    }
+}
+
+/*=========================================
+                End portfolio
+=========================================*/
+
+/*=========================================
+                Start about
+=========================================*/
+.services-content .image{
+    width:200px;
+    height: 400px;
+    position: relative;
+}
+.services-content .image img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.services-content .image::before{
+    content: " ";
+    position: absolute;
+    background-color:#555;
+    height: calc(100% + 80px);
+    width:100px;
+    top:-40px;
+    z-index: -1;
+    left:-16px;
+}
+
+.services-content .image::after{
+    content: " ";
+    position: absolute;
+    height: 300px;
+    width: 100px;
+    border-left: 60px solid #000267;
+    border-bottom: 66px solid #000267;
+    z-index: -2;
+    top: -40px;
+    left: 159px;
+}
+
+.services-content .about-text{
+    width:calc(100% - 400px);
+    text-align: left;
+}
+
+.services-content .about-text p:first-of-type{
+    font-weight: bolder;
+    line-height: 2;
+    margin-bottom: 51px;
+    }
+.services-content .about-text hr{
+    width:50%;
+    display: inline-block;
+    border-style: solid;
+    border-color: var(--main-color);
+}
+.services-content .about-text p:last-of-type{
+    color:#777;
+    margin: 40px 0;
+    line-height: 2;
+}
+
+p ,hr{
+    text-align: left;
+
+}
+@media (max-width:991px){
+    .services-content .about-text{
+        width:auto;
+    }
+    hr{
+        margin-left: 25%;
+    }
+    p{
+        text-align: center;
+    }
+    .services-content .image::after,.services-content .image::before {
+        display: none;
+    }
+    .services-content .image{
+        margin:auto;
+        margin-bottom: 60px;
+    }
+}
+
+
+
+/*=========================================
+                End about
+=========================================*/
+
+
+/*=========================================
+                Start contact
+=========================================*/
+.contact{
+    background-color:var(--second-color);
+}
+.contact .contact-content .info{
+    line-height: 2;
+    padding-left: 100px;
+    text-align: center ;
+}
+.contact .contact-content .info .label{
+    font-weight: 800;
+    color:#283f4b;
+    font-size: 40px;
+    letter-spacing:-3px;
+    margin-bottom:-10px ;
+}
+.contact .contact-content .info .label +a{
+    display: block;
+    color:var(--main-color);
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing:-2px;
+    font-size: 40px;
+}
+
+.contact .contact-content .info .social{
+    display: flex;
+    justify-content:center; 
+    margin-top: 10px;
+
+    font-size: 20px;
+}
+.contact .contact-content .info .social p{
+    margin-right: 10px;
+}
+.contact .contact-content .info .social a{
+    margin-left: 10px;
+    margin-top: 5px;
+    color:#213d4d;
+    text-decoration: none;
+}
+
+@media (max-width:790px){
+    .contact .contact-content .info .label ,
+    .contact .contact-content .info .label +a{
+        font-size: 30px;
+    }
+    .contact .contact-content .info .social{
+        font-size: 20px;;
+    }
+}
+@media (max-width:580px){
+    .contact .contact-content .info .label ,
+    .contact .contact-content .info .label +a{
+        font-size: 20px;
+    }
+    .contact .contact-content .info .social{
+        font-size: 10px;;
+    }
+.contact .contact-content .info {
+    line-height: 2;
+    text-align: center;
+    padding-left: 0;
+    width:100%;
+    }
+}
+@media (max-width:350px){
+    .contact .contact-content .info .label ,
+    .contact .contact-content .info .label +a{
+        font-size: 15px;
+        letter-spacing: 0;
+    }
+    .contact .contact-content .info .social{
+        font-size: 11px;;
+    }
+}
+
+/*=========================================
+                End contact
+=========================================*/
+/*========================================
+                Start footer
+=========================================*/
+footer{
+    background-color:#283f4b;
+}
+footer .foot{
+    color:white;
+    padding: 30px 10px;
+    font-size: 16px;
+    text-align: center;
+}
+footer .foot span{
+    color:var(--main-color);
+    font-weight: 800;
+}
+
+/*========================================
+                End footer
+=======================================*/
